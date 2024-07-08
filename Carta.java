@@ -1,26 +1,24 @@
-public class Carta {
-    private String color;
-    private String tipo;
+package ec.edu.espol;
 
-    public Carta(String color, String tipo) {
+public class Carta {
+    private char color;
+    private String valor;
+
+    public Carta(char color, String valor) {
         this.color = color;
-        this.tipo = tipo;
+        this.valor = valor;
     }
 
-    public String getColor() {
+    public char getColor() {
         return color;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public boolean esValidaSobre(Carta otraCarta) {
-        return this.color.equals(otraCarta.getColor()) || this.tipo.equals(otraCarta.getTipo()) || this.color.equals("N") || otraCarta.getColor().equals("N");
+    public String getValor() {
+        return valor;
     }
 
     @Override
     public String toString() {
-        return tipo + color;
+        return valor + color;
     }
 }
